@@ -1,0 +1,214 @@
+/* =====================================================
+   Modern Tech Resume Theme
+   Color Palette:
+   #0A192F - Deep navy background
+   #64FFDA - Neon teal accent
+   #112240 - Section background
+   #CCD6F6 - Light text
+   #8892B0 - Muted text
+   ===================================================== */
+
+/* Box Model Fix */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    background-color: #0A192F;
+    color: #CCD6F6;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+header {
+    background-color: #112240;
+}
+
+header .content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    flex-wrap: wrap; /* keeps it responsive */
+}
+
+/* Profile image */
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 3px solid #64FFDA;
+}
+
+/* Text area next to image */
+header .column-wide {
+    flex: 1;
+    min-width: 300px;
+}
+
+header .column-wide h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5em;
+    color: #64FFDA;
+    margin: 0;
+}
+
+header .column-wide h2 {
+    font-weight: 400;
+    color: #8892B0;
+    margin: 0 0 10px 0;
+    border: none; /* remove underline */
+}
+
+header .column-wide p {
+    border-top: 2px solid #64FFDA;
+    padding-top: 10px;
+    margin-top: 10px;
+    max-width: 700px;
+    font-size: 1.1em;
+    color: #CCD6F6;
+}
+
+/* =====================================================
+   COLUMNS (used in work section)
+   ===================================================== */
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+section {
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.work {
+    background-color: #112240;
+    margin-bottom: 20px;
+}
+
+/* Group each job into its own block */
+.job-item {
+    overflow: hidden;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(136, 146, 176, 0.25);
+}
+
+.job-item:last-of-type {
+    border-bottom: none;
+}
+
+.education {
+    background-color: #112240;
+}
+
+/* =====================================================
+   HEADINGS
+   ===================================================== */
+h2 {
+    font-family: 'Lora', serif;
+    color: #64FFDA;
+    border-bottom: 2px solid #64FFDA;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #CCD6F6;
+    font-family: 'Lora', serif;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+ul li {
+    color: #8892B0;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer {
+    background-color: #112240;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h2 {
+    color: #64FFDA;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+    color: #64FFDA;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    color: #8892B0;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 800px) {
+    header .content-wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    header .column-wide {
+        width: 100%;
+    }
+
+    .column-narrow,
+    .column-wide {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        min-height: 0;
+    }
+}
